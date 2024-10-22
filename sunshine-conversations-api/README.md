@@ -4,6 +4,24 @@
 
 ## 手順
 
+`https://<your-zendesk-subdomain>.zendesk.com/admin/apps-integrations/apis/conversations-api/`
+
+から Conversations API 用の API キーを作成し、
+
+- アプリ ID: `APP_ID`
+- キー ID: `KEY_ID`
+- シークレットキー: `SECRET`
+
+をそれぞれ `.env` に記述する。
+
+また、取得したい User の user id または external id を取得する。
+
+```
+$ node --env-file=.env main.js
+```
+
+を実行する。
+
 
 ## 参考リンク
 
