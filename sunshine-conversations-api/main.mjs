@@ -1,4 +1,4 @@
-const SunshineConversationsClient = require('sunshine-conversations-client');
+import SunshineConversationsClient from 'sunshine-conversations-client';
 const defaultClient = SunshineConversationsClient.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
@@ -15,9 +15,14 @@ const appId = process.env.APP_ID;
 
 const userIdOrExternalId = process.env.EXTERNAL_ID;
 
-apiInstance.getUser(appId, userIdOrExternalId).then(function(data) {
- console.log('API called successfully. Returned data: ');
- console.dir(data, {depth: null});
-}, function(error) {
- console.error(error);
-});
+// get user
+const user = await apiInstance.getUser(appId, userIdOrExternalId);
+console.log('API called successfully. Returned data: ');
+console.dir(user, {depth: null});
+
+
+
+// update user
+const userUpdateBody = new SunshineConversationsClient.UserUpdateBody();
+
+const res = await apiInstance.updateUser(appId, userIdOrExternalId, userUpdateBody);
