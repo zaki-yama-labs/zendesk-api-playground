@@ -1,6 +1,4 @@
-# Zendesk の Sunshine Conversations API を叩いてみるテスト
-
-サンプルとして https://docs.smooch.io/rest/#operation/getUser を叩く
+# Zendesk の Sunshine Conversations API サンプル
 
 ## 手順
 
@@ -17,7 +15,7 @@
 また、取得したい User の user id または external id を取得する。
 
 ```
-$ node --env-file=.env main.js
+$ node --env-file=.env scripts/***.mjs
 ```
 
 を実行する。
