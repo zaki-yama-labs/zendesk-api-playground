@@ -19,10 +19,3 @@ const userIdOrExternalId = process.env.EXTERNAL_ID;
 const user = await apiInstance.getUser(appId, userIdOrExternalId);
 console.log('API called successfully. Returned data: ');
 console.dir(user, {depth: null});
-
-
-
-// update user
-const userUpdateBody = new SunshineConversationsClient.UserUpdateBody();
-
-const res = await apiInstance.updateUser(appId, userIdOrExternalId, userUpdateBody);
